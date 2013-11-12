@@ -16,7 +16,7 @@ get '/:username' do
   # p "Username:"
   # p @user = TwitterUser.create!(Twitter.user(params[:username]))
   @user = Twitter.user(params[:username])
-  @user.attrs.each do |key, value|
+  @user.attrs.sort.each do |key, value|
     p "#{key} : #{value}"
   end
   # if @user.tweets.empty?
