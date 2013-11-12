@@ -1,5 +1,8 @@
 source 'https://rubygems.org'
 
+gem 'twitter'
+
+
 # PostgreSQL driver
 gem 'pg'
 
