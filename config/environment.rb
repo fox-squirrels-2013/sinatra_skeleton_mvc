@@ -7,7 +7,7 @@ require 'bundler/setup' if File.exists?(ENV['BUNDLE_GEMFILE'])
 
 # Require gems we care about
 require 'rubygems'
-
+require 'twitter'
 require 'uri'
 require 'pathname'
 
@@ -35,6 +35,21 @@ configure do
 
   # Set the views to
   set :views, File.join(Sinatra::Application.root, "app", "views")
+end
+
+# Marion's keys
+# Twitter.configure do |config|
+#   config.consumer_key = 'm8AayyyMYK7Zl6I4DXPVA'
+#   config.consumer_secret = 'dr5lqaOHTyeh5jQgSP4RihTGKlq0jeEe6HIRXoqXbQ'
+#   config.oauth_token = '419333254-iBmslQAACbcc193AHxgPIrLHiOXMdjq9cz9h7Iiu'
+#   config.oauth_token_secret = 'W2bB2Zr8Mirhj4GxrCwviykRZ2IVkeraiBpfV7pLBpanS'
+# end
+
+Twitter.configure do |config|
+  config.consumer_key = 'XBXSiefx3y6jnBaI1Cdtew'
+  config.consumer_secret = 'v5kpCrSfAtrprtbzlrlRp5PPcZHNGBRk8QVoaMC0yg'
+  config.oauth_token = '1370464358-DlMjrrAzCBgNGZ16lxWli1xSkjBZoCo3XzyIc2k'
+  config.oauth_token_secret = '6csN7RWoCnXxUPbZ2j1OisiO6dtJKvgUHwbo2xDmVZjIx'
 end
 
 # Set up the controllers and helpers
