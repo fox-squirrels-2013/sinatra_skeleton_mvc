@@ -7,7 +7,7 @@ require 'bundler/setup' if File.exists?(ENV['BUNDLE_GEMFILE'])
 
 # Require gems we care about
 require 'rubygems'
-
+require 'twitter'
 require 'uri'
 require 'pathname'
 
@@ -46,10 +46,12 @@ Dir[APP_ROOT.join('app', 'helpers', '*.rb')].each { |file| require file }
 # Set up the database and models
 require APP_ROOT.join('config', 'database')
 
+
+
 #Twitter configuration
 Twitter.configure do |config|
-  config.consumer_key = 'a9ViH8l0gObIgj5viaSWA'
-  config.consumer_secret = 'tin0VMK73XRb5kZ5ystbCRxExTOdB0VdD2LHgbmW3w'
-  config.oauth_token = '15912074-1VXR3eup4FUfnhm441loWjaHcieq4MFIX2fvZb3fZ'
-  config.oauth_token_secret = 'tyS9qngJy8JIv6G7yqx9gRVl0aBvijs8uY98nH1lxAOvV'
+  config.consumer_key = '1CweqPwP2qGswJ8mGgGmYQ'
+  config.consumer_secret = 'IMMXkv0mPYfNnsGbwUaCM5M28OG0cD0HYU6ZvuWzv80'
+  config.oauth_token = '2190741499-SS4PemM6jSJ5rsOn2PveNizNglhkC7Rt2t19uVu'
+  config.oauth_token_secret = 'OFVS2RiK5wrjd8xmJ73akCoiXsggiv012ewh6YObPkEVm'
 end
