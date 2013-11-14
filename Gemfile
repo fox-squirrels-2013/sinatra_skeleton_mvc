@@ -17,6 +17,8 @@ gem 'rake'
 
 gem 'shotgun'
 
+gem "koala", "~> 1.8.0rc1"
+
 group :test do
   gem 'shoulda-matchers'
   gem 'rack-test'
